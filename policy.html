@@ -8,33 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Urbanist', sans-serif; background: #000; color: #fff; min-height: 100vh; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 40px; padding: 40px 20px; }
-        .header h1 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3em; margin-bottom: 10px; }
-        .header p { font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 1.2em; opacity: 0.7; text-transform: uppercase; letter-spacing: 2px; }
-        .tabs { display: flex; gap: 10px; margin-bottom: 30px; justify-content: center; }
-        .tab-button { font-family: 'Urbanist', sans-serif; font-weight: 600; background: transparent; border: 2px solid #fff; color: #fff; padding: 15px 40px; font-size: 1.1em; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; }
-        .tab-button:hover { background: #fff; color: #000; transform: translateY(-2px); }
-        .tab-button.active { background: #fff; color: #000; box-shadow: 0 8px 20px rgba(255,255,255,0.3); }
-        .content-card { background: #fff; border-radius: 20px; padding: 50px; box-shadow: 0 20px 60px rgba(255,255,255,0.1); margin-bottom: 40px; color: #333; }
-        .tab-content { display: none; animation: fadeIn 0.5s ease; }
-        .tab-content.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .intro { font-weight: 400; font-size: 1.1em; line-height: 1.8; margin-bottom: 40px; padding: 25px; background: #f5f5f5; border-radius: 15px; border-left: 5px solid #000; }
-        .section-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; border-bottom: 3px solid #000; }
-        .section-title:first-of-type { margin-top: 0; }
-        .section-content { font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 1.05em; line-height: 1.8; margin-bottom: 30px; text-align: justify; }
-        .footer { text-align: center; color: #fff; padding: 30px; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 0.95em; opacity: 0.7; }
-        .last-updated { font-family: 'Urbanist', sans-serif; font-weight: 500; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; text-align: center; color: #fff; margin-bottom: 20px; font-size: 0.95em; letter-spacing: 1px; }
-        @media (max-width: 768px) {
-            .header h1 { font-size: 2em; }
-            .content-card { padding: 30px 20px; }
-            .tabs { flex-direction: column; }
-            .tab-button { width: 100%; }
-            .section-content { text-align: left; }
-        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {font-family: 'Urbanist', sans-serif; background: #000; min-height: 100vh; padding: 20px; color: #fff;}
+        .container {max-width: 900px; margin: 0 auto;}
+        .header {text-align: center; color: white; margin-bottom: 40px; padding: 40px 20px;}
+        .header h1 {font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3em; margin-bottom: 10px; letter-spacing: -1px;}
+        .header p {font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 1.2em; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase;}
+        .tabs {display: flex; gap: 10px; margin-bottom: 30px; justify-content: center;}
+        .tab-button {font-family: 'Urbanist', sans-serif; font-weight: 600; background: transparent; border: 2px solid #fff; color: white; padding: 15px 40px; font-size: 1.1em; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.5px;}
+        .tab-button:hover {background: #fff; color: #000; transform: translateY(-2px);}
+        .tab-button.active {background: white; color: #000; box-shadow: 0 8px 20px rgba(255,255,255,0.3);}
+        .content-card {background: #fff; border-radius: 20px; padding: 50px; box-shadow: 0 20px 60px rgba(255,255,255,0.1); margin-bottom: 40px;}
+        .tab-content {display: none; animation: fadeIn 0.5s ease;}
+        .tab-content.active {display: block;}
+        @keyframes fadeIn {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}
+        .intro {font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 1.1em; line-height: 1.8; color: #333; margin-bottom: 40px; padding: 25px; background: #f5f5f5; border-radius: 15px; border-left: 5px solid #000;}
+        .section-title {font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8em; color: #000; margin-top: 40px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #000;}
+        .section-title:first-of-type {margin-top: 0;}
+        .section-subtitle {font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.3em; color: #111; margin-top: 30px; margin-bottom: 10px;}
+        .section-content {font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 1.05em; line-height: 1.8; color: #444; margin-bottom: 30px; text-align: justify;}
+        .footer {text-align: center; color: white; padding: 30px; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 0.95em; opacity: 0.7;}
+        .last-updated {font-family: 'Urbanist', sans-serif; font-weight: 500; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; text-align: center; color: white; margin-bottom: 20px; font-size: 0.95em; letter-spacing: 1px;}
+        @media (max-width: 768px) {.header h1 {font-size: 2em;} .content-card {padding: 30px 20px;} .tabs {flex-direction: column;} .tab-button {width: 100%;} .section-content {text-align: left;}}
     </style>
 </head>
 <body>
@@ -44,117 +39,149 @@
             <p>Legal Information</p>
         </div>
 
-        <div class="last-updated">Last Updated: October 2025</div>
+        <div class="last-updated">
+            Last Updated: November 2025
+        </div>
 
         <div class="tabs">
             <button class="tab-button active" onclick="showTab('privacy')">Privacy Policy</button>
-            <button class="tab-button" onclick="showTab('terms')">Terms of Service</button>
+            <button class="tab-button" onclick="showTab('terms')">Terms & Conditions</button>
         </div>
 
         <div class="content-card">
             <!-- Privacy Policy -->
             <div id="privacy" class="tab-content active">
                 <div class="intro">
-                    At Bliitz, we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store, and protect your information when you use our app and related services. By using our app, you agree to the terms outlined in this Privacy Policy.
+                    Your privacy is important to us, and we are committed to protecting the personal information you provide while using our App. This Privacy Policy explains how we collect, use, store, and secure your information, and how we respect your choices and rights regarding your personal data. By using the App, you consent to the practices described below and are encouraged to review this policy carefully.
                 </div>
 
                 <h2 class="section-title">Information We Collect</h2>
                 <p class="section-content">
-                    We collect information to provide a safe, personalized experience. This includes information you provide directly (name, email, profile info), preferences, and automatically collected technical data like device type, app version, and usage analytics. Location is collected only with your consent.
+                    We collect information in several categories to provide a safe, personalized, and functional experience. The types of information we collect depend on how you use the App and the permissions you grant. We also collect certain information automatically to ensure proper operation and improvement of the App.
+                </p>
+
+                <h3 class="section-subtitle">Information You Provide Directly</h3>
+                <p class="section-content">
+                    When you sign in using Google or Facebook, we receive only the information that you choose to share with the App, such as your name, email address, profile picture, and public account information depending on your privacy settings. This information is used exclusively to create and personalize your in-App profile and to enable social features. We do not collect your contacts, private account details, or phone number unless voluntarily provided by you through the login service.
+                </p>
+
+                <h3 class="section-subtitle">Location Information</h3>
+                <p class="section-content">
+                    With your consent, the App may access your device's location. You have full control over this setting and may deny permission or manually select a location at any time. We only collect your approximate or precise location once when granted or the location you manually choose within the App. This information is used to display relevant links, groups, and other content based on your region. We do not perform background location tracking or continuous monitoring.
+                </p>
+
+                <h3 class="section-subtitle">Preferences and Profile Settings</h3>
+                <p class="section-content">
+                    The App collects the preferences and settings you manually select, including interests, categories, personalization choices, and content filtering settings. This data is used to provide a more tailored experience, improve recommendations, and ensure that the content displayed is relevant to your selections. This information is stored securely and is never shared externally except to sync with your account across devices.
+                </p>
+
+                <h3 class="section-subtitle">Automatically Collected Technical Data</h3>
+                <p class="section-content">
+                    We may automatically collect technical data such as your device type, operating system version, App version, crash logs, and anonymous usage analytics. This information helps us diagnose issues, improve performance, and enhance security. Some of your data may also be used to deliver personalized advertisements within the App to ensure ads are relevant and meaningful. No advertising identifiers or device IDs are collected for tracking outside of the App.
                 </p>
 
                 <h2 class="section-title">How We Use Your Information</h2>
                 <p class="section-content">
-                    We use your information to operate and improve the app, personalize your feed, provide relevant groups, and ensure security. We never sell or rent your data.
+                    The information collected is used strictly to provide, operate, and improve the App. This includes managing your profile, personalizing your feed, showing relevant content and groups, and enabling location-based services. At all times, your data is handled responsibly and is not sold or rented to third parties.
                 </p>
 
-                <h2 class="section-title">Sharing and Disclosure</h2>
+                <h2 class="section-title">How We Store and Protect Your Information</h2>
                 <p class="section-content">
-                    We share information only with trusted service providers for analytics, storage, or security, and when required by law. We do not share your data with advertisers outside the app.
+                    We implement industry-standard security measures to protect your data from unauthorized access, misuse, or disclosure. Personal information is stored in encrypted databases, and communications with the App are secured via HTTPS and TLS. Access to your data is restricted to authorized personnel only, and we continuously monitor our systems for vulnerabilities. Data is retained only as long as your account is active or required to comply with legitimate operational or legal obligations.
                 </p>
 
-                <h2 class="section-title">Your Rights</h2>
+                <h2 class="section-title">Sharing and Disclosure of Information</h2>
                 <p class="section-content">
-                    You have control over your data. You can update, delete, or withdraw consent. Denying permissions may limit certain features but the app remains functional.
+                    Your information may be shared only in limited circumstances: with trusted service providers necessary for authentication, cloud storage, analytics, or security; if required by law; or to prevent fraud, abuse, or security threats. We do not share your information with advertisers, data brokers, or external marketing platforms outside of the personalized in-App ads described above.
+                </p>
+
+                <h2 class="section-title">Your Rights and Choices</h2>
+                <p class="section-content">
+                    You have full control over your personal information and can access, update, or delete your account and data at any time. You can also withdraw consent for location tracking, adjust preferences, and disable notifications. Denying permissions may limit certain features, but the App will remain functional within those limits.
                 </p>
 
                 <h2 class="section-title">Children’s Privacy</h2>
                 <p class="section-content">
-                    The app is not intended for users under 13. We do not knowingly collect information from children.
+                    The App is not intended for users under 13 years of age, and we do not knowingly collect personal information from children. If we discover that we have inadvertently collected data from a child under 13, we will take immediate steps to delete it.
                 </p>
 
-                <h2 class="section-title">Third-Party Links</h2>
+                <h2 class="section-title">Third-Party Links and Services</h2>
                 <p class="section-content">
-                    The app may include links to third-party websites. We are not responsible for their content or privacy practices.
+                    The App may include links to third-party websites or services. We are not responsible for the content or privacy practices of these external sites. Please review their policies before sharing any personal information.
                 </p>
 
-                <h2 class="section-title">Changes to This Policy</h2>
+                <h2 class="section-title">Changes to This Privacy Policy</h2>
                 <p class="section-content">
-                    We may update this Privacy Policy periodically. Continued use constitutes acceptance of updates.
+                    We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. All updates will be posted within the App, and major changes may be communicated via notifications. Continued use of the App constitutes acceptance of the updated policy.
+                </p>
+
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-content">
+                    For any questions, concerns, or requests regarding your personal information or this Privacy Policy, please reach out to our official support email provided within the App. We are committed to responding promptly and assisting you with any privacy-related inquiries.
                 </p>
             </div>
 
-            <!-- Terms of Service -->
+            <!-- Terms & Conditions -->
             <div id="terms" class="tab-content">
                 <div class="intro">
-                    Welcome to Bliitz. By using our app, you agree to the following terms and conditions. If you do not agree, please discontinue use.
+                    Welcome to Bliitz. By using our app, you agree to these Terms and Conditions. If you do not agree, please stop using the app immediately.
                 </div>
 
-                <h2 class="section-title">User Eligibility</h2>
+                <h2 class="section-title">User Eligibility and Account Security</h2>
                 <p class="section-content">
-                    Users must be at least 13 years old. Keep account credentials secure. Impersonation or false information is prohibited.
+                    You must be at least 13 years old. Users are responsible for their account security. Impersonating others without a disclaimer may result in loss of verification badge or account termination.
                 </p>
 
-                <h2 class="section-title">Acceptable Use</h2>
+                <h2 class="section-title">Acceptable Use Policy</h2>
                 <p class="section-content">
-                    Pornographic content and impersonation are strictly prohibited. Violations may result in suspension or ban.
+                    Uploading, sharing, or promoting pornographic content is strictly prohibited. Violating these rules, including impersonation or misleading users, may result in suspension or permanent termination.
                 </p>
 
-                <h2 class="section-title">Payments & Refunds</h2>
+                <h2 class="section-title">Payments and Refund Policy</h2>
                 <p class="section-content">
-                    Subscriptions can be canceled anytime. Access remains until the end of billing. No partial refunds.
+                    All payments are single-tap, one-time payments for buying coins. There are no subscriptions. Impressions may take longer in regions with fewer users. Refunds may be issued based on remaining undelivered impressions. All purchased impressions will eventually be delivered.
                 </p>
 
                 <h2 class="section-title">User-Generated Content</h2>
                 <p class="section-content">
-                    Users are responsible for content they post. Bliitz reserves the right to remove harmful or inappropriate content.
+                    Users are responsible for their posted content. Bliitz may remove content that violates rules or is harmful. Repeated violations may lead to restricted access or account termination.
                 </p>
 
                 <h2 class="section-title">Intellectual Property</h2>
                 <p class="section-content">
-                    All trademarks, logos, and content are owned by Bliitz and cannot be used without consent.
+                    All content and logos in the App are owned by Bliitz. Unauthorized use is prohibited and may lead to legal action.
                 </p>
 
-                <h2 class="section-title">Privacy & Data Protection</h2>
+                <h2 class="section-title">Privacy and Data Protection</h2>
                 <p class="section-content">
-                    We collect and process user data as outlined in our Privacy Policy. Security measures are in place, but complete protection cannot be guaranteed.
+                    We handle your data as described in our Privacy Policy. Security measures are applied but complete security cannot be guaranteed.
                 </p>
 
                 <h2 class="section-title">Limitation of Liability</h2>
                 <p class="section-content">
-                    The app is provided 'as is'. Bliitz is not responsible for losses or damages arising from its use.
+                    The App is provided 'as is'. Bliitz is not liable for losses or damages resulting from use or inability to use the App.
                 </p>
 
-                <h2 class="section-title">Account Termination</h2>
+                <h2 class="section-title">Account Termination and Enforcement</h2>
                 <p class="section-content">
-                    Bliitz may terminate accounts that violate these terms. Users can also delete accounts voluntarily.
+                    Bliitz may suspend or terminate accounts violating terms without notice. Users may also voluntarily delete their accounts.
                 </p>
 
-                <h2 class="section-title">Governing Law</h2>
+                <h2 class="section-title">Governing Law and Dispute Resolution</h2>
                 <p class="section-content">
-                    These Terms are governed by the laws of [Your Country]. Disputes should be resolved through negotiation or legal means if necessary.
+                    These terms are governed by local laws. Disputes will first attempt negotiation, then arbitration or legal proceedings if necessary.
                 </p>
 
-                <h2 class="section-title">Changes to Terms</h2>
+                <h2 class="section-title">Changes to These Terms</h2>
                 <p class="section-content">
-                    We may update these Terms periodically. Continued use constitutes acceptance.
+                    We may update these terms periodically. Continued use after updates constitutes acceptance.
                 </p>
             </div>
         </div>
 
         <div class="footer">
             <p>&copy; 2025 Bliitz. All rights reserved.</p>
-            <p>For questions or concerns, contact: service.bliitz@gmail.com</p>
+            <p>For questions or concerns, please contact us at service.bliitz@gmail.com</p>
         </div>
     </div>
 
@@ -163,7 +190,7 @@
             const tabs = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-button');
             tabs.forEach(tab => tab.classList.remove('active'));
-            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons.forEach(button => button.classList.remove('active'));
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
         }
